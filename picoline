@@ -1,0 +1,23 @@
+Regnecentralens Piccoline var designet til undervisningsbrug og kom i 1984 netop som computere blev indført i gymnasieskolen med brask og bram. Nævn 10-, 20- og 30- timers kurser og mange gymnasielærere får stadig nervøse trækninger. Maskinen var et kraftigt fremskridt i forhold til de ældre Z80-baserede modeller. Desværre for skolerne valgte virksomhederne IBM PC med MS-DOS, og Piccolinen blev en blindgyde. 
+
+Arkitektur
+
+Maskinen bruger en Intel 80186 CPU. I forhold til IBMs PC/XT (Intel 8088) er den hurtigere, billigere og har højopløsningsgrafik. Operativsystemet er Concurrent CP/M 86 (CCP/M) Dette blev senere opdateret til Concurrent DOS, som gjorde det muligt at køre tekst-baserede DOS-programmer. Diskettedrevene er i et separat kabinet, og var designet således at fire Piccoloer kunne dele to drev. I så tilfælde blev der sat en mærkat med et af bogstaverne A, B, C og D på hver maskine. Det svarede til fire lysdioder på diskettekabinettet, således at man kunne se hvilken Piccoline brugte drevene. Alternativt kunne skolen bruge en en kraftigere RC Partner med harddisk som server.
+
+Piccolinen havde mulighed for grafik med en opløsning på 560x250 pixels (280x250 i farve) på en 50 Hz skærm. 
+
+Brugen af Piccolinen
+
+Den almindelige skoleelev vil sandsynligvis opleve den følgende sekvens, hvor Piccolinen først spørger om hvilket drev den skal boote fra. Derefter startes en konfigurationsmenu, som returneres fra og Comal80 startes.
+
+    Inden boot fra diskette
+
+    Inden boot fra diskette
+
+I 1987 blev det muligt at køre Concurrent DOS (C-DOS) på Piccolinerne og dermed også det grafiske brugerinterface "GEM" fra Digital Research. C-DOS kunne eksekvere både de oprindelige CCP/M programmer, og MS-DOS programmer såfremt de ikke brugte grafik. Mulighed for grafik kom først i 1989 med VPCG programmet fra Orfeus.
+
+    Piccoline-gem-infoboks.png
+    Piccoline-gem-start.png
+    Piccoline-gem-write.png
+
+Produktionen af Piccoline stoppede i 1989. Det var blevet almindeligt for personlige computere at have indbygget harddisk og Piccolinen havde ikke denne mulighed. Fremover måtte skolerne købe Partneren til eleverne. RC900 skulle derefter udfylde server-rollen. 

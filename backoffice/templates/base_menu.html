@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page %}
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg d-print-none">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'pic/logo.png' %}" alt="logo" width="30" height="30" xclass="d-inline-block align-text-top">&nbsp;Virtuelt museum</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav xme-auto mb-2 mb-lg-0 nav-tabs xnav-justified">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="bo_index" href="{% url 'bo_index' %}">Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="bo_topics" href="{% url 'bo_topic' %}">Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="list_topics" href="{% url 'list_topic' %}">List Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="bo_skilt" href="{% url 'sign' %}">Skilt</a>
+          </li>
+          
+          {% comment %} 
+
+           <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_tomplan" href="{% url 'tom_plan' %}">Tom Plan</a>
+          </li>
+          {% if develmode %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_info" href="{% url 'info' %}">Info</a>
+          </li> 
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_config" href="{% url 'config' %}">Indstillinger</a>
+          </li>
+          {% comment %} {% if adminmode %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/admin/">Admin</a>
+          </li>
+          {% endif %} {% endcomment %}
+          {% comment %} <li class="nav-item">
+            <a class="nav-link disabled" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu disabled ">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> {% endcomment %}
+
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-tabs">
+          {% if develmode %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/plan/test">Test</a>
+          </li>
+          {% endif %}
+
+          {% comment %} <li class="nav-item">
+            <a class="nav-link" aria-current="page" target="blank" href="{% url 'logout' %}">Log Ud</a>
+          </li>{% endcomment %}
+        </ul> 
+
+      </div>
+    </div>
+  </nav>
+
+
+{% block content %}
+
+{% endblock %}
+
+{% endblock %}
+
+{% block script %}
+<script>
+    $("#menu_start").addClass("active");
+</script>
+{% endblock %}

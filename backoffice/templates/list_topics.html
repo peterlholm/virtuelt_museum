@@ -1,0 +1,22 @@
+{% extends "base_menu.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<br>
+<h3>Topics</h3>
+<br>
+<table class="table table-light table-striped">
+    <tr><th>TopicNo</th><th>Titel</th><th>Manucfacturer</th><th></th></tr>
+    {% for t in topiclist %}  
+    <tr>
+        <td>{{ t.TopicNo }}</td>
+        <td>{{ t.Titel}}</td>
+        <td>{{ t.Manufacturer}}</td>
+        <td>
+        <button type="button" onclick="location.href='{% url 'bo_topic' %}?no={{t.TopicNo}}'" class="btn btn-sm btn-primary ">{% translate 'Edit' %}</button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

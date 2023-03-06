@@ -1,0 +1,46 @@
+{% extends "base_menu.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .sign {
+        width: 900px;
+        height: 700px;
+        background-color: 0x222;
+        border: black 7px solid;
+        border-radius: .7rem;
+        padding: 20px;
+    }
+
+    .qr {
+        float: right;
+    }
+</style>
+<br>
+<h2>Udstillingsskilt</h2>
+
+<div class="sign">
+    <div class="qr">
+    <a href="" ><img src="{% static 'qr/1.png' %}" alt="qr" width="100" height="100"></a>
+    </div>
+    <h1>{{ titel }}</h1>
+   
+    <h4>Manufacturer: {{manuctaturer}}</h4>
+   
+    <h3>Specs:</h2>
+       <p> {{ factuals }}</p>
+    <h3>Beskrivelse</h3>
+    <p>{{ description }}</p>
+    <div>
+        <img src="{% static 'picoline.jpg' %}" alt="billede" width="200" height="200">"
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+    $("#menu_start").addClass("active");
+</script>
+{% endblock %}

@@ -20,5 +20,6 @@ from backoffice.views import index as backoffice_index
 urlpatterns = [
     path("", backoffice_index),
     path('bo/', include('backoffice.urls')),
+    path('mus/', include('mus.urls')),
     path('admin/', admin.site.urls)
 ]
